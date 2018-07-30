@@ -45,5 +45,10 @@ public class TestCase006 {
                 JavascriptExecuter js = (JavascrpitExecuter)driver
                 js.executeScript("document.getElementById('dob').value='09/12/2017'");
                 subscribe_btn.getSingUpButton().click();
+                String ActualToast=subscribe_btn.getSignUpSuccessMessage()().getText();
+                System.out.println(ActualToast);
+		String ExpectdToast="Registration has been completed. Please verify your email to activation";
+		Assert.assertEquals(ActualToast, ExpectdToast);
+	}
 	}
 }

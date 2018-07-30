@@ -46,4 +46,7 @@ public class SignUp {
         public WebElement getSingUpButton(){
              return driver.findElement(By.id("signupsubmit"));
         }
+        public WebElement getSignUpSuccessMessage(){
+            return driver.findElement(By.className("toast-message"));
+        }
 }
