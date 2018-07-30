@@ -31,5 +31,19 @@ public class SignUp {
 	public WebElement getPassword(){
 		return driver.findElement(By.xpath("//*[@id='password']"));
 	}
-	
+	public WebElement setCountry() {
+		return driver.findElement(By.id("phone"));
+	}
+        public WebElement setGenderFemale(){
+               return driver.findElement(By.className("label_radio.r_on"));
+        }
+        public WebElement setGenderMale(){
+               return driver.findElement(By.className("label_radio.r_on"));
+        }
+         public WebElement setDOB(){
+               return driver.findElement(By.id("dob"));
+        }
+        public WebElement getSingUpButton(){
+             return driver.findElement(By.id("signupsubmit"));
+        }
 }

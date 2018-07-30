@@ -32,12 +32,18 @@ public class TestCase006 {
 		subscribe_btn.getLastName().sendKeys("hh");
 		String LastName=subscribe_btn.getLastName().getText();
 		System.out.println(LastName);
-		subscribe_btn.getEmail().sendKeys("hh");
+		subscribe_btn.getEmail().sendKeys("hh@mailinator.com");
 		String email=subscribe_btn.getEmail().getText();
 		System.out.println(email);
 		subscribe_btn.getPassword().sendKeys("hh");
 		String passwd=subscribe_btn.getPassword().getText();
 		System.out.println(passwd);
-		
+                subscribe_btn.setCountry.click();
+		subscribe_btn.setCountry.clear();
+                subscribe_btn.setCountry.sendkeys("+917034191716");
+                subscribe_btn.setGenderMale().click();
+                JavascriptExecuter js = (JavascrpitExecuter)driver
+                js.executeScript("document.getElementById('dob').value='09/12/2017'");
+                subscribe_btn.getSingUpButton().click();
 	}
 }
