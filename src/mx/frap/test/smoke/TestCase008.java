@@ -24,5 +24,15 @@ public class TestCase008{
 	@Test
 	public void testcase002(){
         subscribe_btn.waitForLoginPageToLoad();
+        Select oSelect = new Select(subscribe_btn.searchTextBox());
+        List <WebElement> elementCount = oSelect.getOptions();
+        //System.out.println(elementCount.size());
+        int isize = elementCount.size();
+        for(int i=0; i<isize; i++){
+        String actualValue = elementCount.get(i).getText();
+        System.out.println(actualValue);
+        String expectedValue="Bangaluru";
+        Assert.assertEquals(actualValue,expectedValue)
+        }
         }
 }
