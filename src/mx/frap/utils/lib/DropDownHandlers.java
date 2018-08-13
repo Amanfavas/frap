@@ -5,6 +5,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DropDownHandlers
 {
+	public DropDownHandler(){
+	}
 	public static void selectDDLByIndex(WebElement ddl, int index)
 	{
 		Select sct = new Select(ddl);
